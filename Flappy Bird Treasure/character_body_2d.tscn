@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dc24o5g3h2cn5"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
