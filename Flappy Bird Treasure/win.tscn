@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw0u0j1syl02p"]
+
+[ext_resource type="Texture2D" uid="uid://cdr4ou6mgi5er" path="res://pixil-frame-0.png" id="1_myppk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnorm"]
+size = Vector2(24.2609, 18.2878)
+
+[node name="Win" type="CharacterBody2D"]
+
+[node name="Throphu" type="Sprite2D" parent="."]
+position = Vector2(369.25, 325.75)
+scale = Vector2(11.5, 10.98)
+texture = ExtResource("1_myppk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Throphu"]
+position = Vector2(0.282612, 1.51639)
+shape = SubResource("RectangleShape2D_cnorm")
