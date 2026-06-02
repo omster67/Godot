@@ -1,18 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg7h78h48nn60"]
+[gd_scene load_steps=3 format=3 uid="uid://dl2crfw3ncqrt"]
 
-[ext_resource type="Texture2D" uid="uid://b80jt6qm65c1f" path="res://pixilart-drawing.png" id="1_mbf5s"]
+[ext_resource type="Texture2D" uid="uid://ccwsi1n1ybo6t" path="res://flappybird.png" id="1_vc26s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eigog"]
-radius = 85.0
-height = 170.0
+radius = 118.0
+height = 236.0
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(-457, -56)
+metadata/_edit_group_ = true
 
-[node name="Bird" type="Sprite2D" parent="."]
-position = Vector2(217, 175)
-scale = Vector2(9, 11.003)
-texture = ExtResource("1_mbf5s")
+[node name="bird" type="Sprite2D" parent="."]
+position = Vector2(592, 167)
+scale = Vector2(10.32, 11.26)
+texture = ExtResource("1_vc26s")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(210, 173)
+position = Vector2(577, 170)
 shape = SubResource("CapsuleShape2D_eigog")
