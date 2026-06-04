@@ -1,26 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv2rqm3a18jn4"]
+[gd_scene load_steps=5 format=3 uid="uid://dv2rqm3a18jn4"]
 
 [ext_resource type="Texture2D" uid="uid://b70nqm3uii3p5" path="res://background.png" id="1_28x8f"]
 [ext_resource type="PackedScene" uid="uid://dl2crfw3ncqrt" path="res://player.tscn" id="1_a4xwr"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vkjlb"]
-distance = -388.0
+[ext_resource type="PackedScene" uid="uid://b8i5yu05e1m8q" path="res://platform.tscn" id="4_0hpq5"]
+[ext_resource type="PackedScene" uid="uid://dslqsebib1883" path="res://ground.tscn" id="4_2hux3"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-457, -56)
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(1020.5, 375.75)
-scale = Vector2(11.61, 8.16667)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(577, 352.844)
+scale = Vector2(11.61, 8.35083)
 texture = ExtResource("1_28x8f")
 
+[node name="Ground" parent="Background" instance=ExtResource("4_2hux3")]
+position = Vector2(-50.0431, -34.6369)
+scale = Vector2(0.0861326, 0.111732)
+
 [node name="Player" parent="." instance=ExtResource("1_a4xwr")]
-position = Vector2(-381, 258)
+position = Vector2(-321, -77)
 
-[node name="Ground" type="StaticBody2D" parent="."]
+[node name="Platform" parent="." instance=ExtResource("4_0hpq5")]
+position = Vector2(506, -25)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(188, 260)
-shape = SubResource("WorldBoundaryShape2D_vkjlb")
+[node name="Platform2" parent="." instance=ExtResource("4_0hpq5")]
+position = Vector2(-240, 224)

@@ -1,20 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl2crfw3ncqrt"]
+[gd_scene load_steps=4 format=3 uid="uid://dl2crfw3ncqrt"]
 
+[ext_resource type="Script" path="res://player.gd" id="1_eqebs"]
 [ext_resource type="Texture2D" uid="uid://ccwsi1n1ybo6t" path="res://flappybird.png" id="1_vc26s"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eigog"]
-radius = 118.0
-height = 236.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_6hn0i"]
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(-457, -56)
-metadata/_edit_group_ = true
+script = ExtResource("1_eqebs")
 
-[node name="bird" type="Sprite2D" parent="."]
-position = Vector2(592, 167)
-scale = Vector2(10.32, 11.26)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(552, 192)
+scale = Vector2(8.71, 8.65)
 texture = ExtResource("1_vc26s")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(577, 170)
-shape = SubResource("CapsuleShape2D_eigog")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(548, 190)
+scale = Vector2(8.71, 8.65)
+shape = SubResource("CircleShape2D_6hn0i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(539, 190)
