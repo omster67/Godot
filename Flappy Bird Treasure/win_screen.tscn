@@ -11,9 +11,9 @@ script = ExtResource("1_fnc83")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 374.0
+offset_left = 432.0
 offset_top = 170.0
-offset_right = 616.0
+offset_right = 674.0
 offset_bottom = 257.0
 theme_override_colors/font_color = Color(0.969436, 0.943112, 0.606427, 1)
 theme_override_font_sizes/font_size = 50
@@ -21,11 +21,13 @@ text = "YOU WIN!"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 343.0
-offset_top = 255.0
-offset_right = 636.0
-offset_bottom = 334.0
+offset_left = 403.0
+offset_top = 269.0
+offset_right = 696.0
+offset_bottom = 348.0
 theme_override_colors/font_color = Color(0.907675, 0.502488, 0.449786, 1)
 theme_override_font_sizes/font_size = 30
 text = "Play Again?
 "
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

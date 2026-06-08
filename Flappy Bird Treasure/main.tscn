@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv2rqm3a18jn4"]
+[gd_scene load_steps=7 format=3 uid="uid://dv2rqm3a18jn4"]
 
 [ext_resource type="Texture2D" uid="uid://b70nqm3uii3p5" path="res://background.png" id="1_28x8f"]
 [ext_resource type="PackedScene" uid="uid://dl2crfw3ncqrt" path="res://player.tscn" id="1_a4xwr"]
 [ext_resource type="PackedScene" uid="uid://b8i5yu05e1m8q" path="res://platform.tscn" id="4_0hpq5"]
 [ext_resource type="PackedScene" uid="uid://dslqsebib1883" path="res://ground.tscn" id="4_2hux3"]
+[ext_resource type="PackedScene" uid="uid://dhdcci5eh5mja" path="res://goal.tscn" id="5_n8b6m"]
+[ext_resource type="PackedScene" uid="uid://b5dgqrkxcbn34" path="res://enemy.tscn" id="6_achoo"]
 
 [node name="Main" type="Node2D"]
 
@@ -17,10 +19,19 @@ position = Vector2(-50.0431, -34.6369)
 scale = Vector2(0.0861326, 0.111732)
 
 [node name="Player" parent="." instance=ExtResource("1_a4xwr")]
-position = Vector2(-321, -77)
+position = Vector2(-257, 145)
 
 [node name="Platform" parent="." instance=ExtResource("4_0hpq5")]
-position = Vector2(506, -25)
+position = Vector2(485, -138)
 
 [node name="Platform2" parent="." instance=ExtResource("4_0hpq5")]
-position = Vector2(-240, 224)
+position = Vector2(-204, -173)
+
+[node name="Platform3" parent="." instance=ExtResource("4_0hpq5")]
+position = Vector2(460, 242)
+
+[node name="Goal" parent="." instance=ExtResource("5_n8b6m")]
+position = Vector2(1015, 477)
+
+[node name="Enemy" parent="." instance=ExtResource("6_achoo")]
+position = Vector2(656, 477)
